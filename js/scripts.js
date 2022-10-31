@@ -24,11 +24,12 @@ function destination(city, landmark, season) {
     this.seasonName = season;
 }
 
-function destination(city2, landmark2, season2) {
-    this.city2Name = city2;
-    this.landmark2Name = landmark2;
-    this.season2Name = season2;
-}
+// function destination(city2, landmark2, season2) {
+//     this.city2Name = city2;
+//     this.landmark2Name = landmark2;
+//     this.season2Name = season2;
+// }
+
 const myFlorida = new destination("Miami", "Gulf Beach", "Summer");
 const myAlaska = new destination("Juneau", "Ice Joe Glacier", "Winter");
 
@@ -39,29 +40,38 @@ console.log(myAlaska)
 
 // UI Logic
 
-// const btn = document.querySelector("input[name='btn']:checked").value;
-
-let miamiTrip = document.getElementById("miami");
-let juneauTrip = document.getElementById("juneau");
-
-miamiTrip.setAttribute('class', 'hidden');
-juneauTrip.setAttribute('class', 'hidden');
-
-
-    if (florida === miami) {
-        miamiTrip.removeAttribute('class', 'hidden')
-    } else if (alaska === juneau) {
-        juneauTrip.removeAttribute('class', 'hidden')
-    }
-
-
-
 window.addEventListener("load", function () {
-    const form = document.getElementById("radio-form");
+    const form = document.getElementById("destination");
+    
     form.addEventListener("submit", function (event) {
         event.preventDefault();
-    });
+         
+
+        let miami = document.querySelector("div#miami");
+        let juneau = document.querySelector("div#juneau");
+
+
+        let trip = document.getElementById("trip").value;
+        console.log(trip)
+        // document.getElementById("flow").value;
+        // document.getElementById("flow1").value;
+        // const input1 = document.querySelector("flow").value;
+        // const input2 = document.querySelector("flow1").value;
+
+        miami.setAttribute("class", "hidden");
+        juneau.setAttribute("class", "hidden");
+
+
+        if (trip === "flow") {
+            miami.removeAttribute('class')
+        } else if (trip === "flow1") {
+            juneau.removeAttribute('class')
+        } else {
+            return false;
+        }
+
+
+
+   });
 
 });
-
-
