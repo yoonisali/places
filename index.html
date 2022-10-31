@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Places I Have Been!</h1>
+    <form id="radio-form"></form>
+            <h2>Click on one destination to see the details of the trip! </h2>
+            <label>
+                <input type="radio" name="btn" value="florida" checked>
+                Florida!
+            </label>
+            <br>
+            <label>
+                <input type="radio" name="btn" value="alaska">
+                Alaska!
+            </label>
+    </form>
+    <br>
+    <button type="submit">Submit!</button>
+
+    <div id="miami" class="hidden">
+        <h2>Florida Trip!</h2>
+        <ul>
+            <li>Miami</li>
+            <li>Gulf Beach</li>
+            <li>Summer</li>
+        </ul>
+    </div>
+    <div id="juneau" class="hidden">
+        <h2>Alaska Trip!</h2>
+        <li>Juneau</li>
+        <li>Ice Joe Glacier</li>
+        <li>Winter</li>
+    </div>
+</body>
+
+</html>
